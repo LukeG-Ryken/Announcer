@@ -1,0 +1,5 @@
+# Time in ticks(20 ticks to a second)
+
+fadeInTicks: 20
+stayTicks: 60
+fadeOutTicks: 20

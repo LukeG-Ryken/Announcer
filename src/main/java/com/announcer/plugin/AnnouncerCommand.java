@@ -28,12 +28,6 @@ public class AnnouncerCommand implements CommandExecutor {
             }
         }
 
-        // Check if arguments were provided
-        if (args.length == 0) {
-            sender.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&cIncorrect usage! Please use: /announce <title> , <subtitle>"));
-            return true;
-        }
-
         // Reconstruct the full arguments string to easily find the comma separator
         String fullInput = String.join(" ", args);
         String titleText;
@@ -47,9 +41,9 @@ public class AnnouncerCommand implements CommandExecutor {
             titleText = fullInput.trim();
         }
 
-        // Fetch timings from config.yml (Default to 20, 70, 20 ticks if missing)
+        // Fetch timings from config.yml (Default to 20, 40, 20 ticks if missing)
         int fadeInTicks = plugin.getConfig().getInt("FadeIn", 20);
-        int stayTicks = plugin.getConfig().getInt("Stay", 70);
+        int stayTicks = plugin.getConfig().getInt("Stay", 60);
         int fadeOutTicks = plugin.getConfig().getInt("FadeOut", 20);
 
         // Convert ticks to Milliseconds for the Adventure API (1 tick = 50ms)
