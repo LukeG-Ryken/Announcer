@@ -1,0 +1,17 @@
+name: Announcer
+version: 26.1.2
+main: com.announcer.plugin.AnnouncerPlugin
+api-version: '26.1.2'
+description: Displays title announcements to all players on the server.
+author: TechnoWizard3113
+
+commands:
+  announce:
+    description: Sends a title announcement to all players.
+    usage: /announce <title> [, subtitle]
+    permission: announcer.use
+
+permissions:
+  announcer.use:
+    description: Allows the use of the /announce command.
+    default: op
