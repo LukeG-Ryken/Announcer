@@ -6,7 +6,7 @@
 
     <groupId>com.announcer.plugin</groupId>
     <artifactId>Announcer</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>26.1.x</version>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
